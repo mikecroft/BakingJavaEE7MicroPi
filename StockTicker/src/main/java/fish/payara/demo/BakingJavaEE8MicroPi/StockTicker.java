@@ -1,3 +1,5 @@
+package BakingJavaEE8MicroPi;
+
 import fish.payara.demo.BakingJavaEE8MicroPi.Stock;
 
 import javax.ejb.Schedule;

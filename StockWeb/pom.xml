@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>StockTicker</artifactId>
+    <artifactId>StockWeb</artifactId>
     <packaging>war</packaging>
 
     <dependencies>
@@ -20,15 +20,15 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>fish.payara.demo</groupId>
-            <artifactId>StockLib</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>fish.payara.api</groupId>
             <artifactId>payara-api</artifactId>
             <version>4.1.2.173</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>fish.payara.demo</groupId>
+            <artifactId>StockLib</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

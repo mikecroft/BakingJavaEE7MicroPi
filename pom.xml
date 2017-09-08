@@ -11,6 +11,7 @@
     <modules>
         <module>StockLib</module>
         <module>StockTicker</module>
+        <module>StockWeb</module>
     </modules>
 
 
