@@ -15,7 +15,6 @@
     </properties>
 
     <artifactId>StockLib</artifactId>
-    <packaging>war</packaging>
 
     <dependencies>
         <dependency>
