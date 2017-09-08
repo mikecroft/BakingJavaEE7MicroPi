@@ -26,7 +26,7 @@ $(document).ready(function() {
                         }
 		},
 		title: {
-			text: 'Payara Stock Price'
+			text: 'Payara Stock Price: Websockets'
 		},
 		xAxis: {
 			type: 'datetime',

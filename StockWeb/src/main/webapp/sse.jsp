@@ -26,7 +26,7 @@
                     }
                 },
                 title: {
-                    text: 'Payara Stock Price'
+                    text: 'Payara Stock Price: Server-Sent Events'
                 },
                 xAxis: {
                     type: 'datetime',
