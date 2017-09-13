@@ -61,7 +61,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <payaraVersion>4.1.2.173</payaraVersion>
+                    <payaraVersion>${payara.version}</payaraVersion>
                     <commandLineOptions>
                         <option>
                             <key>--autobindhttp</key>

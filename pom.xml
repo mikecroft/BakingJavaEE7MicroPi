@@ -14,5 +14,23 @@
         <module>StockWeb</module>
     </modules>
 
+    <repositories>
+        <repository>
+            <id>snapshots</id>
+            <name>Sonatype Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <properties>
+        <payara.version>5.0.0.Alpha2-SNAPSHOT</payara.version>
+    </properties>
+
 
 </project>

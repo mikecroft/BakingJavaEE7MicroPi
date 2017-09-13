@@ -1,6 +1,4 @@
-package BakingJavaEE8MicroPi;
-
-import fish.payara.demo.BakingJavaEE8MicroPi.Stock;
+package fish.payara.demo.BakingJavaEE8MicroPi;
 
 import javax.ejb.Schedule;
 import javax.ejb.Singleton;

@@ -30,6 +30,12 @@
             <version>4.1.2.173</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.1</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -61,7 +67,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <payaraVersion>4.1.2.173</payaraVersion>
+                    <payaraVersion>${payara.version}</payaraVersion>
                     <commandLineOptions>
                         <option>
                             <key>--autobindhttp</key>
