@@ -17,7 +17,7 @@ public class StockTicker {
     private Stock stock;
 
     @Inject
-    @Outbound
+    @Outbound(loopBack = true)
     private Event<Stock> stockEvents;
 
     @Schedule(hour = "*", minute="*", second = "*/1", persistent = false)

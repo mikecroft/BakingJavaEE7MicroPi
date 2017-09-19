@@ -1,7 +1,10 @@
 package fish.payara.demo.BakingJavaEE8MicroPi;
 
+import fish.payara.micro.cdi.Inbound;
+
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.event.Observes;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
@@ -31,12 +34,11 @@ public class StockTickerResource {
         this.sseBroadcaster = sse.newBroadcaster();
     }
 
-
     @GET
     @Produces(MediaType.SERVER_SENT_EVENTS)
     public void eventOutput(@Context SseEventSink eventSink){
         // registers the requester as a consumer of events
-        eventSink.send(sse.newEvent("Registered as event consumer"));
+        eventSink.send(sse.newEvent(stockTicker.getStock().toString()));
         sseBroadcaster.register(eventSink);
     }
 
@@ -46,6 +48,10 @@ public class StockTickerResource {
     public void broadcast(@FormParam("event") String event){
         // broadcasts the event to all registered consumers
         sseBroadcaster.broadcast(sse.newEvent(event));
+    }
+
+    private void watch(@Observes @Inbound Stock stock){
+        broadcast(stock.toString());
     }
 
 }

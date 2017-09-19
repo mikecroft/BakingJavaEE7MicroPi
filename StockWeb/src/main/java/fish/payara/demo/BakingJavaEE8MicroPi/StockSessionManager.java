@@ -50,6 +50,7 @@ public class StockSessionManager {
      * @param stock A Stock object from the CDI Event Bus
      */
     private void observer(@Observes @Inbound Stock stock) {
+        System.out.println("received stock event");
         try {
             for (Session session : sessions) {
                 System.out.println("Received " + stock.toString() + " writing to " + session.getId());

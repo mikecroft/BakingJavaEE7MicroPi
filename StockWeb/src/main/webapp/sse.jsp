@@ -85,7 +85,7 @@
 
     <script type="text/javascript">
 
-                var sseUri = "";
+                var sseUri = "http://localhost:8081/StockTicker-1.0-SNAPSHOT/rest/sse";
                 var source = new EventSource(sseUri);
                 source.onmessage = function (event) {
                     onMessage(event)
