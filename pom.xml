@@ -30,6 +30,8 @@
 
     <properties>
         <payara.version>5.0.0.Alpha2-SNAPSHOT</payara.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
 
