@@ -1,7 +1,5 @@
 package fish.payara.demo.BakingJavaEE8MicroPi;
 
-import org.eclipse.microprofile.config.inject.ConfigProperty;
-
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
@@ -9,7 +7,6 @@ import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.ejb.Timeout;
 import javax.ejb.TimerService;
-import javax.inject.Inject;
 import javax.json.bind.JsonbBuilder;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -24,10 +21,7 @@ import javax.ws.rs.sse.SseEventSource;
 @Startup
 public class StockTickerSseClient {
 
-    @Inject
-    @ConfigProperty(name = "micro.pi.stockticker.url", defaultValue = "NOT FOUND")
-    private String stockTickerURL;
-
+    private String stockTickerURL = "http://localhost:8080/StockTicker-1.0-SNAPSHOT/rest/sse";
 
     private SseEventSource source;
     private Stock stock;

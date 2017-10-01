@@ -1,20 +1,17 @@
 package fish.payara.demo.BakingJavaEE8MicroPi;
 
+import fish.payara.micro.cdi.Outbound;
+
 import javax.ejb.Schedule;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
-
-import fish.payara.cluster.Clustered;
-import fish.payara.micro.cdi.Outbound;
-
 import java.io.Serializable;
 
 /**
  * @author Mike Croft
  */
-@Clustered
 @Singleton
 @Startup
 public class StockTicker implements Serializable{
