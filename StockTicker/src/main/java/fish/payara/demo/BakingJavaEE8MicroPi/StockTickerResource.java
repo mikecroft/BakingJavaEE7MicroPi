@@ -37,8 +37,9 @@ public class StockTickerResource {
     @GET
     @Produces(MediaType.SERVER_SENT_EVENTS)
     public void eventOutput(@Context SseEventSink eventSink){
-        // registers the requester as a consumer of events
+        // send a single event
         eventSink.send(sse.newEvent(stockTicker.getStock().toString()));
+        // registers the requester as a consumer of events
         sseBroadcaster.register(eventSink);
     }
 

@@ -28,7 +28,6 @@ public class StockWebsocket {
         sessionManager.deregisterSession(session);
     }
 
-
     @OnMessage
     public String onMessage(String message, Session session) {
         return null;

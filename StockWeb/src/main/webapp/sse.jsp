@@ -85,7 +85,7 @@
 
     <script type="text/javascript">
 
-                var sseUri = "http://localhost:8081/StockTicker-1.0-SNAPSHOT/rest/sse";
+                var sseUri = "http://localhost:8080/StockTicker-1.0-SNAPSHOT/rest/sse";
                 var source = new EventSource(sseUri);
                 source.onmessage = function (event) {
                     onMessage(event)
@@ -96,7 +96,7 @@
                 function onMessage(event) {
                     var object = JSON.parse(event.data);
                     var x = (new Date()).getTime();
-                    var y = object.price;
+                    var y = object.RandomPrice;
                     document.chart.series[0].addPoint([x, y], true, true, false);
                 }
     </script>
