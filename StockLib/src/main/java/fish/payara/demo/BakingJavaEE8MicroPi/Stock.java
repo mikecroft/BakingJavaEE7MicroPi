@@ -3,25 +3,17 @@ package fish.payara.demo.BakingJavaEE8MicroPi;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonObjectBuilder;
-import javax.json.bind.JsonbBuilder;
-import javax.json.bind.JsonbConfig;
-import javax.json.bind.annotation.JsonbNillable;
-import javax.json.bind.annotation.JsonbProperty;
-import javax.json.bind.annotation.JsonbTransient;
 import java.io.Serializable;
 
 /**
  * @author Mike Croft
  */
-@JsonbNillable
 public class Stock implements Serializable {
 
     private String symbol;
 
-    @JsonbTransient
     private String description;
 
-    @JsonbProperty("RandomPrice")
     private double price;
 
     public Stock() { }
@@ -66,7 +58,6 @@ public class Stock implements Serializable {
 
     @Override
     public String toString() {
-        JsonbConfig nillableConfig = new JsonbConfig().withNullValues(true);
-        return JsonbBuilder.create(nillableConfig).toJson(this);
+        return this.toJson().toString();
     }
 }

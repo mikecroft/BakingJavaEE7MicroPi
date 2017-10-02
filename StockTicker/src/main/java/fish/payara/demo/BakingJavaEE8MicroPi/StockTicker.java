@@ -19,7 +19,7 @@ public class StockTicker implements Serializable{
     private Stock stock;
 
     @Inject
-    @Outbound(loopBack = true)
+    @Outbound
     private Event<Stock> stockEvents;
 
     @Schedule(hour = "*", minute="*", second = "*/1", persistent = false)

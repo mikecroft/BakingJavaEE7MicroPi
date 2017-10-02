@@ -97,7 +97,7 @@
                 websocket.onmessage = function (event) {
                     var object = JSON.parse(event.data);
                     var x = (new Date()).getTime();
-                    var y = object.RandomPrice;
+                    var y = object.price;
                     document.chart.series[0].addPoint([x, y], true, true, false);
                 }
 
