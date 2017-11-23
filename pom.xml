@@ -29,7 +29,7 @@
     </repositories>
 
     <properties>
-        <payara.version>4.1.2.173</payara.version>
+        <payara.version>4.1.2.174</payara.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>

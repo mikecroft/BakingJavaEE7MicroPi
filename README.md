@@ -1,4 +1,4 @@
-# Baking a Java EE 8 Micro Pi
+# Baking a Java EE 7 Micro Pi
 
 This repository is based heavily off [another Raspberry Pi demo from Steve Millidge](https://github.com/smillidge/PiyaraMicroDemo).
 
