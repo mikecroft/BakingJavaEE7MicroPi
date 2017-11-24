@@ -53,7 +53,6 @@ public class StockSessionManager {
         System.out.println("received stock event");
         try {
             for (Session session : sessions) {
-                System.out.println("Received " + stock.toString() + " writing to " + session.getId());
                 session.getBasicRemote().sendText(stock.toString());
             }
         } catch (IOException ex) {
